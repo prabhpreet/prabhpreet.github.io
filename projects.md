@@ -6,7 +6,7 @@ permalink: /projects/
 
 ### Embedded
 
-* [Scheduler](/scheduler/): A real time EDF based scheduler for ATMEGA microcontrollers (12/14: In progress!)
+* [Scheduler](/Scheduler/): A real time EDF based scheduler for ATMEGA microcontrollers (12/14: In progress!)
 * [Automatic Room Temperature Control](http://youtu.be/kcRBH8WgSn8) : First real embedded project, prototype for controlling room temperature in university hostels.
 
 ### Apps, Web Development
