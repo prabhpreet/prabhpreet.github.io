@@ -5,7 +5,7 @@ baseurl: ""
 url: "http://prabhpreet.github.io"
 facebook_username: prabhpreet.dua
 github_username:  prabhpreet
-
+linkedin_username: prabhpreetdua
 # Build settings
 markdown: kramdown
 permalink: pretty
