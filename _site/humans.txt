@@ -1,0 +1,14 @@
+/* TEAM */
+Creator: Prabhpreet Singh Dua
+Contact: 
+Twitter: prabhpreetD
+Location: India
+                           
+/* THANKS */                           
+Creator of Balzac theme: Cole Townsend
+Twitter: @twnsndco
+
+/* SITE */                         
+Last update: 2015-05-11
+Standards: HTML, SCSS, Jekyll                        
+Software: git

@@ -1,0 +1,33 @@
+<p class="introduction">Hi!<br/> I'm an undergraduate student pursuing Electronics and Communication Engineering.</p>
+
+<p>This is stuff I've done recently:</p>
+
+<ul>
+  <li><a href="/scheduler">Scheduler</a></li>
+  {% if site.projects %}
+	{% for project in site.projects %}
+		  <li>
+			<a href="{{ project.url | prepend: site.baseurl }}">{{ project.title }}</a>
+		  </li>
+	{% endfor %}	
+  {%endif%}
+</ul>
+
+<p> Check out <a href="/projects">other projects</a>.<p>
+
+
+{% if site.posts %}
+<h2>Here's what I've written about recently</h2>
+	<ul>
+    {% for post in site.posts %}
+      <li>
+        <span>{{ post.date | date: "%b %-d, %Y" }}</span>:
+        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+{%endif%}
+
+
+
+
