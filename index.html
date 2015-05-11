@@ -1,37 +1,34 @@
 ---
-layout: base
+layout: default
 ---
-<div class="wrapper">
-    <header>
-        {% if site.compass.logo %}
-        <div class="logo-container">
-          <a class="logo" href="{{ page.baseurl }}" style="background-image: url('{{ site.baseurl }}{{ site.compass.logo }}')"></a>
-        </div>
-        {% endif %}
 
-        {% if site.compass.author %}
-        <div class="author-container"><h1>{{ site.compass.author }}</h1></div>
-        {% endif %}
+<div class="home">
 
-        {% if site.compass.tagline %}
-        <div class="tagline-container"><p>{{ site.compass.tagline }}</p></div>
-        {% endif %}
-		
-		<ul class="fa-ul main-list">
-		{% for link in site.links %}
-		  <li class="main-list-item">
-			
-			<a href="{{ link.url}}"><span class="fa fa-{{ link.icon }} fa-lg main-list-item-icon"></span></a>
-		  </li>
-		{% endfor %}  
-		 
-		</ul>
-    </header>
-    <main>
-      {% if site.compass.include_content %}
-      <div class="content">
-        {% include content.html %}
-      </div>
-      {% endif %}
-    </main>
+	<h1 class="home_title">Hi there! I'm Prabhpreet. Welcome to my place on the interwebs.</h1>
+	
+	<div class="home_half">
+	<h2 class="home_title">Work</h2>
+	<ul>
+	{% for page in site.pages %}
+          {% if page.title %}<li><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>{% endif %}
+    {% endfor %}
+	</ul>
+	</div>
+	{% if site.posts %}
+	<div class="home_half">
+	
+	<h2 class="home_title">Articles</h2>
+	
+  <ul>
+    {% for post in site.posts %}
+      <li>
+        <span>{{ post.date | date: "%b %-d, %Y" }}</span>:
+        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+  </div>
+  {%endif%}
+
+
 </div>

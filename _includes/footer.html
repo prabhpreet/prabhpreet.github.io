@@ -1,41 +1,74 @@
-<div class="push"></div>
-  <footer>
-    <aside class="wrap">
-      <ol class="prev-posts">
-        <p class="list-title">Recent Posts</p>
-        {% for post in site.posts | limit:3 %} <!-- for1 -->
-            <li>
-              <span class="recent-title"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title | strip_html | strip_newlines | truncate: 30 }} </a></span>
-              <span class="date">{{post.date | date: "%b %d, %Y" }}</span>
-            </li>
-        {% endfor %}
-      </ol>
+<footer class="site-footer">
 
-      <div class="social">
-        <ul>
-            <li><a id="mail" href="mailto:{{ site.owner.email }}"><span class="foot-link">Contact Me</span></a></li>
+  <div class="wrap">
 
-            {% if site.owner.twitter %}
-            <li><a id="twit" href="http://twitter.com/{{ site.owner.twitter }}" target="_blank"><span class="foot-link">@{{ site.owner.twitter }}</span></a></li>
-            {% endif %}
+    <h2 class="footer-heading">{{ site.title }}</h2>
 
-
-            {% if site.owner.dribbble %}
-            <li><a id="drib" href="http://dribbble.com/{{ site.owner.dribbble }}" target="_blank"><span class="foot-link">Dribbble</span></a></li>
-            {% endif %}
-        </ul>
+    <div class="footer-col-1 column">
+      <ul>
+        <li>{{ site.title }}</li>
+        <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+		<li class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></li>
+      </ul>
     </div>
-    </aside>
-    <small>&copy; {{ site.time | date: '%Y' }} {{ site.owner.name }}. Powered by <a href="http://jekyllrb.com">Jekyll</a> using the <a href="http://jekyll.gtat.me/about">Balzac</a> theme.</small>
-  </footer>
 
-  <!-- If they're out, get some from the cellar -->
-  <script>window.jQuery || document.write('<script src="{{ site.url }}/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-  <script src="{{ site.url }}/assets/js/retina.min.js"></script>
+    <div class="footer-col-2 column">
+      <ul>
+        {% if site.github_username %}<li>
+          <a href="https://github.com/{{ site.github_username }}">
+            <span class="icon github">
+              <svg version="1.1" class="github-icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+                <path fill-rule="evenodd" clip-rule="evenodd" fill="#C2C2C2" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761
+                c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32
+                c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472
+                c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037
+                C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65
+                c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261
+                c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082
+                c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129
+                c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+              </svg>
+            </span>
+            <span class="username">{{ site.github_username }}</span>
+          </a>
+        </li>{% endif %}
+        {% if site.facebook_username %}<li>
+          <a href="https://facebook.com/{{ site.facebook_username }}">
+            <span class="icon facebook">
+              <svg version="1.1" class="facebook-icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 32 32" enable-background="new 0 0 16 16" xml:space="preserve">
+                <g><path fill-rule="evenodd" clip-rule="evenodd" fill="#C2C2C2" d="M 17.996,32L 12,32 L 12,16 l-4,0 l0-5.514 l 4-0.002l-0.006-3.248C 11.993,2.737, 13.213,0, 18.512,0l 4.412,0 l0,5.515 l-2.757,0 c-2.063,0-2.163,0.77-2.163,2.209l-0.008,2.76l 4.959,0 l-0.585,5.514L 18,16L 17.996,32z"></path></g>
 
-  <!-- Custom JS -->
-  <script src="{{ site.url }}/assets/js/scripts.js"></script>
 
+              </svg>
+            </span>
+            <span class="username">{{ site.facebook_username }}</span>
+          </a>
+        </li>{% endif %}
+		{% if site.linkedin_username %}<li>
+          <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}">
+            <span class="icon linkedin">
+             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" width="16px" height="16px" viewBox="0 0 62 58" version="1.1">
+    <!-- Generator: Sketch 3.0.3 (7891) - http://www.bohemiancoding.com/sketch -->
+    <title>footer-icon-linkedin-grey</title>
+    <desc>Created with Sketch.</desc>
+    <defs/>
+    <g id="App-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M0.456647399,30 C0.456647399,13.4314567 13.9075137,0 30.5,0 C47.0924863,0 60.5433526,13.4314567 60.5433526,30 C60.5433526,46.5685433 47.0924863,60 30.5,60 C13.9075137,60 0.456647399,46.5685433 0.456647399,30 Z M22.8425065,23.7098144 L16.0438505,23.7098144 L16.0438505,44.1369537 L22.8425065,44.1369537 L22.8425065,23.7098144 Z M23.2902832,17.3908761 C23.2461572,15.3880081 21.8138965,13.862504 19.4881191,13.862504 C17.1623417,13.862504 15.6418291,15.3880081 15.6418291,17.3908761 C15.6418291,19.3522579 17.1174011,20.9216886 19.3998672,20.9216886 L19.4433143,20.9216886 C21.8138965,20.9216886 23.2902832,19.3522579 23.2902832,17.3908761 Z M47.3610611,32.4246563 C47.3610611,26.1503226 44.007081,23.2301456 39.5332519,23.2301456 C35.9236128,23.2301456 34.3075166,25.2128128 33.4051747,26.6036896 L33.4051747,23.7103567 L26.605704,23.7103567 C26.6953136,25.6271338 26.605704,44.137496 26.605704,44.137496 L33.4051747,44.137496 L33.4051747,32.7292961 C33.4051747,32.1187963 33.4493006,31.5097877 33.629063,31.0726898 C34.1204225,29.8530458 35.2391853,28.5902885 37.1174576,28.5902885 C39.5785998,28.5902885 40.562405,30.4634101 40.562405,33.2084226 L40.562405,44.1369537 L47.3607895,44.1369537 L47.3610611,32.4246563 Z" id="footer-icon-linkedin-grey" fill-opacity="0.499999911" fill="#B2B4B3" sketch:type="MSShapeGroup"/>
+    </g>
+</svg>
+            </span>
+            <span class="username">{{ site.linkedin_username }}</span>
+          </a>
+        </li>{% endif %}
+      </ul>
+    </div>
 
-  </body>
-</html>
+    <div class="footer-col-3 column">
+      <p class="text">{{ site.description }}</p>
+    </div>
+
+  </div>
+
+</footer>
