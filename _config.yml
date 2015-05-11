@@ -1,12 +1,107 @@
-# Site settings
-title: NONSENSE
-description: "A heterogeneous mixture of hobbyist electronics revelations, rudimentary coding hacks and thought provoking hypotheses on 42."
-baseurl: ""
-url: "http://prabhpreet.github.io"
-facebook_username: prabhpreet.dua
-github_username:  prabhpreet
-linkedin_username: prabhpreetdua
-# Build settings
+# general configuration
+url: http://localhost:4000/
+baseurl: ''
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
+    defaults:
+        - scope:
+            path: "/projects/"
+            type: projects
+        - values:
+            layout:base
+
+# compass configuration
+compass:
+  # an avatar or logo (optional)
+  logo: "/images/face.png"
+  # author will appear under the avatar (optional)
+  author: "Prabhpreet Singh Dua"
+  # tagline will appear under the title (optional)
+  current: ""
+  # if include_content is true, the contents of the content.html include will be
+  # added right above the generated item list, if present
+  include_content: true
+  # if include_analytics is true, the content of the analytics.html include will
+  # be added at the end of the <head> section. You can add your Google Analytics
+  # Tracking Code to that file.
+  include_analytics: false
+
+# Dependencies
 markdown: kramdown
-permalink: pretty
 highlighter: pygments
+
+# Permalinks
+permalink: pretty
+relative_permalinks: true
+
+
+title:            Prabhpreet Singh Dua
+# tagline:          Wheehee!
+# description:      The answer is 42, right?
+# canonical: ''
+
+# Owner/author information
+owner:
+  name:           Prabhpreet Singh Dua
+  avatar:         avatar.png
+  bio:            "Nice."
+  twitter:        prabhpreetD
+  github:         prabhpreet
+  location:       "India"
+  # Plug in your disqus shortname!
+
+tools:
+  standards:      "HTML, SCSS, Jekyll"
+  software:       "git"
+
+# Links to include in top navigation
+# For external links add external: true
+# Font Awesome Icons
+links:
+  - title: Facebook
+    url: http://facebook.com/prabhpreet.dua
+    external: true
+    icon: facebook
+  - title: Github
+    url: https://github.com/prabhpreet
+    external: true
+    icon: github
+  - title: LinkedIn
+    url: https://www.linkedin.com/profile/view?id=216363808
+    external: true
+    icon: linkedin
+  - title: CV
+    url: /projects
+    icon: file-pdf-o
+
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:    Asia/Calcutta
+future:      true
+highlighter: pygments
+markdown:    kramdown
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  use_coderay: false
+
+  coderay:
+    coderay_line_numbers:
+    coderay_line_numbers_start: 1
+    coderay_tab_width: 4
+    coderay_bold_every: 10
+    coderay_css: class
+
+sass:
+    style: :compressed
+
+# https://github.com/mojombo/jekyll/wiki/Permalinks
+
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp"]

@@ -1,59 +1,103 @@
-<!DOCTYPE html>
-<html>
-
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Sampling sensors</title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="description" content="A heterogeneous mixture of hobbyist electronics revelations, rudimentary coding hacks and thought provoking hypotheses on 42.">
-    <link rel="canonical" href="http://prabhpreet.github.io/2014/12/07/Sampling-sensors/">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/main.css">
-
-</head>
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<title>Sampling sensors &#8211; Prabhpreet Singh Dua</title>
+<meta name="description" content="">
+<meta name="keywords" content="matlab,, testing,, sensors">
 
 
-    <body>
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Sampling sensors &#8211; Prabhpreet Singh Dua">
+<meta property="og:description" content="I am currently working on a robotics project and it required a bit of quick testing. The quickest way to get a readin...">
+<meta property="og:url" content="http://localhost:4000//2014/12/07/Sampling-sensors/">
+<meta property="og:site_name" content="Prabhpreet Singh Dua">
 
+
+<link href="http://localhost:4000//feed.xml" type="application/atom+xml" rel="alternate" title="Prabhpreet Singh Dua Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Type -->
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Crimson+Text:400,400italic,700,700italic" rel='stylesheet' type='text/css' />
+<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="http://localhost:4000//assets/css/entypo.css" media="all">
+
+<!-- In order to use Calendas Plus, you must first purchase it. Then, create a font-face package using FontSquirrel.
+<link rel='stylesheet' href='http://localhost:4000//assets/cal.css' media='all' />
+-->
+
+
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:4000//assets/css/i.css">
+
+<!-- Fresh Squeezed jQuery -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- Load Modernizr -->
+<script src="http://localhost:4000//assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://localhost:4000//favicon.ico">
+
+<div id="bump">
+  <body class="">
     <header class="site-header">
-
-  <div class="wrap">
-
-    <a class="site-title" href="/">NONSENSE</a>
-
-    <nav class="site-nav">
-      <a href="#" class="menu-icon">
-        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-           viewBox="0 0 18 15" enable-background="new 0 0 18 15" xml:space="preserve">
-          <path fill="#505050" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0
-            h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
-          <path fill="#505050" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484
-            h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
-          <path fill="#505050" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0
-            c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
-        </svg>
-      </a>
-    </nav>
-
-  </div>
-
-</header>
-
-
-    <div class="page-content">
       <div class="wrap">
-      <div class="post">
+        <hgroup>
+          <!--<h1><a href="/">Prabhpreet Singh Dua</a></h1> -->
+        </hgroup>
+        <a href="#nav" class="menu"><span class='icons'>☰</span></a>
+        <nav role="navigation">
+          <ul>
+            <li>
+              <a href="/" title="Prabhpreet Singh Dua">Home</a>
+            </li>
+            
+            
+                <li><a href="http://facebook.com/prabhpreet.dua" target="_blank">Facebook</a></li>
+            
+                <li><a href="https://github.com/prabhpreet" target="_blank">Github</a></li>
+            
+                <li><a href="https://www.linkedin.com/profile/view?id=216363808" target="_blank">LinkedIn</a></li>
+            
+                <li><a href="http://localhost:4000//projects" >CV</a></li>
+            
 
-  <header class="post-header">
-    <h1>Sampling sensors</h1>
-    <p class="meta">Dec 7, 2014</p>
-  </header>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-  <article class="post-content">
-  <p>I am currently working on a robotics project and it required a bit of quick testing. The quickest way to get a reading, other than the LCD was UART + a Matlab script. I wrote my own MATLAB script, but it required some obscure functions to get it working.</p>
+
+<section class="article">
+
+
+  <div class="overlay"></div>
+  <div class="featured-image" style="background-image: url(http://localhost:4000//images/typewriter.jpg)"></div>
+
+
+
+      <article class="wrap post">
+        <header class="post-header">
+          <hgroup>
+            <h1>Sampling sensors</h1>
+            <p class="date">Dec 07, 2014</p>
+            <p class="intro"></p>
+          </hgroup>
+        </header>
+
+        <p>I am currently working on a robotics project and it required a bit of quick testing. The quickest way to get a reading, other than the LCD was UART + a Matlab script. I wrote my own MATLAB script, but it required some obscure functions to get it working.</p>
 
 <p>So I thought I’ll share the important tidbits.</p>
 
@@ -61,44 +105,44 @@
 
 <p>It’s kind of like the file pointer data structure in C. It will store the port info, but you’ll have to use <code>fopen</code>, <code>fgets</code> and <code>fclose</code> like manipulating files in C. Actually, the port data has been abstracted to the file. However, <code>fclose</code> is a big deal if you want other programs (such as a code uploader) to access your port.</p>
 
-<div class="highlight"><pre><code class="language-matlab" data-lang="matlab"><span class="n">s</span> <span class="o">=</span> <span class="nb">serial</span><span class="p">(</span><span class="s1">'COM3'</span><span class="p">)</span> <span class="c1">% COM3 is a port. Put whatever port your connected to!</span>
+<div class="highlight"><pre><code class="language-matlab" data-lang="matlab"><span class="n">s</span> <span class="p">=</span> <span class="n">serial</span><span class="p">(</span><span class="s">&#39;COM3&#39;</span><span class="p">)</span> <span class="c">% COM3 is a port. Put whatever port your connected to!</span>
 
-<span class="nb">set</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="s1">'BaudRate'</span><span class="p">,</span> <span class="mi">115200</span><span class="p">);</span> <span class="c1">%Set your baud rate!</span>
-<span class="n">s</span><span class="o">.</span><span class="n">InputBufferSize</span> <span class="o">=</span> <span class="mi">5000</span><span class="p">;</span> <span class="c1">%Set the input buffer size (how much data can be stored)</span>
+<span class="n">set</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="s">&#39;BaudRate&#39;</span><span class="p">,</span> <span class="mi">115200</span><span class="p">);</span> <span class="c">%Set your baud rate!</span>
+<span class="n">s</span><span class="p">.</span><span class="n">InputBufferSize</span> <span class="p">=</span> <span class="mi">5000</span><span class="p">;</span> <span class="c">%Set the input buffer size (how much data can be stored)</span>
 
-<span class="nb">fopen</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+<span class="n">fopen</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
 
-<span class="k">...</span><span class="c"> %Other code omitted</span>
+<span class="c">... %Other code omitted</span>
 
-<span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1">%Infinite loop!</span>
-	<span class="k">if</span> <span class="n">s</span><span class="o">.</span><span class="n">BytesAvailable</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="c1">% To avoid timeout and other weird things</span>
-		<span class="n">str</span> <span class="o">=</span> <span class="nb">fgets</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
-		<span class="k">...</span>
+<span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c">%Infinite loop!</span>
+	<span class="k">if</span> <span class="n">s</span><span class="p">.</span><span class="n">BytesAvailable</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="c">% To avoid timeout and other weird things</span>
+		<span class="n">str</span> <span class="p">=</span> <span class="n">fgets</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+		<span class="c">...</span>
 	<span class="k">end</span>
 <span class="k">end</span>
-<span class="nb">fclose</span><span class="p">(</span><span class="n">s</span><span class="p">);</span> <span class="c1">%Now you can access the object</span></code></pre></div>
+<span class="n">fclose</span><span class="p">(</span><span class="n">s</span><span class="p">);</span> <span class="c">%Now you can access the object</span></code></pre></div>
 
 <h3 id="exceptionerror-handling">Exception/Error handling</h3>
 
 <p>You’ll need this part because you want to close your port and let other programs access it in case something bad happens.</p>
 
 <div class="highlight"><pre><code class="language-matlab" data-lang="matlab"><span class="k">try</span>
-<span class="k">...</span><span class="c"> %Your code here</span>
-<span class="k">catch</span> <span class="n">err</span> <span class="c1">%Catch the damn problem</span>
-<span class="nb">fclose</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+<span class="c">... %Your code here</span>
+<span class="k">catch</span> <span class="n">err</span> <span class="c">%Catch the damn problem</span>
+<span class="n">fclose</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
 <span class="k">end</span><span class="p">;</span></code></pre></div>
 
 <h3 id="plotting">Plotting</h3>
 
 <p>Here you can plot as usual as except you’ll have to use <code>drawnow</code> to plot your data immediately and <code>hold on</code> if you’re going to add data to the existing plot.</p>
 
-<div class="highlight"><pre><code class="language-matlab" data-lang="matlab"><span class="nb">figure</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-<span class="nb">hold</span> <span class="n">on</span><span class="p">;</span>
-<span class="k">...</span>
+<div class="highlight"><pre><code class="language-matlab" data-lang="matlab"><span class="n">figure</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">hold</span> <span class="n">on</span><span class="p">;</span>
+<span class="c">...</span>
 <span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-	<span class="k">...</span>
-	<span class="nb">plot</span><span class="p">(</span><span class="n">A</span><span class="p">);</span>
-	<span class="nb">drawnow</span><span class="p">;</span>
+	<span class="c">...</span>
+	<span class="n">plot</span><span class="p">(</span><span class="n">A</span><span class="p">);</span>
+	<span class="n">drawnow</span><span class="p">;</span>
 <span class="k">end</span></code></pre></div>
 
 <h3 id="string-manipulation">String manipulation</h3>
@@ -107,127 +151,95 @@
 
 <p>My data was of a white line sensor and I was getting it’s left, middle and right values hence the <code>L:%d M:%d R:%d</code>.</p>
 
-<div class="highlight"><pre><code class="language-matlab" data-lang="matlab"><span class="n">A</span> <span class="o">=</span> <span class="nb">sscanf</span><span class="p">(</span><span class="n">str</span><span class="p">,</span> <span class="s1">'L:%d M:%d R:%d'</span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre><code class="language-matlab" data-lang="matlab"><span class="n">A</span> <span class="p">=</span> <span class="n">sscanf</span><span class="p">(</span><span class="n">str</span><span class="p">,</span> <span class="s">&#39;L:%d M:%d R:%d&#39;</span><span class="p">);</span></code></pre></div>
 
 <h3 id="all-the-code">All the code</h3>
 
 <p>Here it is, in all it’s glory:</p>
 
-<div class="highlight"><pre><code class="language-matlab" data-lang="matlab"><span class="nb">clear</span> <span class="nb">all</span><span class="p">;</span>
-<span class="nb">close</span> <span class="nb">all</span><span class="p">;</span>
+<div class="highlight"><pre><code class="language-matlab" data-lang="matlab"><span class="n">clear</span> <span class="n">all</span><span class="p">;</span>
+<span class="n">close</span> <span class="n">all</span><span class="p">;</span>
 
-<span class="nb">figure</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-<span class="n">delay</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">;</span>
+<span class="n">figure</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">delay</span> <span class="p">=</span> <span class="mf">0.5</span><span class="p">;</span>
 
-<span class="n">s</span> <span class="o">=</span> <span class="nb">serial</span><span class="p">(</span><span class="s1">'COM3'</span><span class="p">);</span>
+<span class="n">s</span> <span class="p">=</span> <span class="n">serial</span><span class="p">(</span><span class="s">&#39;COM3&#39;</span><span class="p">);</span>
 
-<span class="nb">set</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="s1">'BaudRate'</span><span class="p">,</span> <span class="mi">115200</span><span class="p">);</span>
-<span class="n">s</span><span class="o">.</span><span class="n">InputBufferSize</span> <span class="o">=</span> <span class="mi">5000</span><span class="p">;</span>
+<span class="n">set</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="s">&#39;BaudRate&#39;</span><span class="p">,</span> <span class="mi">115200</span><span class="p">);</span>
+<span class="n">s</span><span class="p">.</span><span class="n">InputBufferSize</span> <span class="p">=</span> <span class="mi">5000</span><span class="p">;</span>
 
-<span class="nb">fopen</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+<span class="n">fopen</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
 
-<span class="nb">input</span><span class="p">(</span><span class="s1">'Ready?'</span><span class="p">);</span>
+<span class="n">input</span><span class="p">(</span><span class="s">&#39;Ready?&#39;</span><span class="p">);</span>
 
 <span class="k">try</span>
-<span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">;</span><span class="mi">0</span><span class="p">;</span><span class="mi">0</span><span class="p">];</span>
+<span class="n">A</span> <span class="p">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">;</span><span class="mi">0</span><span class="p">;</span><span class="mi">0</span><span class="p">];</span>
 
 <span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">s</span><span class="o">.</span><span class="n">BytesAvailable</span> <span class="o">&gt;</span> <span class="mi">0</span>
-    <span class="n">str</span> <span class="o">=</span> <span class="nb">fgets</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
-    <span class="n">A</span> <span class="o">=</span> <span class="nb">sscanf</span><span class="p">(</span><span class="n">str</span><span class="p">,</span> <span class="s1">'L:%d M:%d R:%d'</span><span class="p">);</span>
-    <span class="nb">bar</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
-    <span class="nb">axis</span><span class="p">([</span><span class="mi">0</span> <span class="mi">4</span> <span class="mi">0</span> <span class="mi">255</span><span class="p">]);</span>
-    <span class="nb">drawnow</span>
-    <span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">;</span><span class="mi">0</span><span class="p">;</span><span class="mi">0</span><span class="p">];</span>
+    <span class="k">if</span> <span class="n">s</span><span class="p">.</span><span class="n">BytesAvailable</span> <span class="o">&gt;</span> <span class="mi">0</span>
+    <span class="n">str</span> <span class="p">=</span> <span class="n">fgets</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+    <span class="n">A</span> <span class="p">=</span> <span class="n">sscanf</span><span class="p">(</span><span class="n">str</span><span class="p">,</span> <span class="s">&#39;L:%d M:%d R:%d&#39;</span><span class="p">);</span>
+    <span class="n">bar</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+    <span class="n">axis</span><span class="p">([</span><span class="mi">0</span> <span class="mi">4</span> <span class="mi">0</span> <span class="mi">255</span><span class="p">]);</span>
+    <span class="n">drawnow</span>
+    <span class="n">A</span> <span class="p">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">;</span><span class="mi">0</span><span class="p">;</span><span class="mi">0</span><span class="p">];</span>
     
     <span class="k">end</span>
 <span class="k">end</span><span class="p">;</span>
-<span class="nb">fclose</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+<span class="n">fclose</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
 <span class="k">catch</span> <span class="n">err</span>
-    <span class="nb">fclose</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+    <span class="n">fclose</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
 <span class="k">end</span><span class="p">;</span></code></pre></div>
 
-  </article>
 
+      <a class="share" href="https://twitter.com/intent/tweet?text=&quot;Sampling sensors&quot;%20/2014/12/07/Sampling-sensors/%20via%20&#64;prabhpreetD" data-dnt="true">Share</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+      
+
+
+      </article>
+
+    </section>
 </div>
-      </div>
+
+<div class="push"></div>
+  <footer>
+    <aside class="wrap">
+      <ol class="prev-posts">
+        <p class="list-title">Recent Posts</p>
+         <!-- for1 -->
+            <li>
+              <span class="recent-title"><a href="http://localhost:4000//2014/12/07/Sampling-sensors/" title="Sampling sensors">Sampling sensors </a></span>
+              <span class="date">Dec 07, 2014</span>
+            </li>
+        
+      </ol>
+
+      <div class="social">
+        <ul>
+            <li><a id="mail" href="mailto:"><span class="foot-link">Contact Me</span></a></li>
+
+            
+            <li><a id="twit" href="http://twitter.com/prabhpreetD" target="_blank"><span class="foot-link">@prabhpreetD</span></a></li>
+            
+
+
+            
+        </ul>
     </div>
+    </aside>
+    <small>&copy; 2015 Prabhpreet Singh Dua. Powered by <a href="http://jekyllrb.com">Jekyll</a> using the <a href="http://jekyll.gtat.me/about">Balzac</a> theme.</small>
+  </footer>
 
-    <footer class="site-footer">
+  <!-- If they're out, get some from the cellar -->
+  <script>window.jQuery || document.write('<script src="http://localhost:4000//assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+  <script src="http://localhost:4000//assets/js/retina.min.js"></script>
 
-  <div class="wrap">
-
-    <h2 class="footer-heading">NONSENSE</h2>
-
-    <div class="footer-col-1 column">
-      <ul>
-        <li>NONSENSE</li>
-        <li><a href="mailto:"></a></li>
-		<li class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-col-2 column">
-      <ul>
-        <li>
-          <a href="https://github.com/prabhpreet">
-            <span class="icon github">
-              <svg version="1.1" class="github-icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                 viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
-                <path fill-rule="evenodd" clip-rule="evenodd" fill="#C2C2C2" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761
-                c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32
-                c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472
-                c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037
-                C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65
-                c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261
-                c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082
-                c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129
-                c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
-              </svg>
-            </span>
-            <span class="username">prabhpreet</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://facebook.com/prabhpreet.dua">
-            <span class="icon facebook">
-              <svg version="1.1" class="facebook-icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                 viewBox="0 0 32 32" enable-background="new 0 0 16 16" xml:space="preserve">
-                <g><path fill-rule="evenodd" clip-rule="evenodd" fill="#C2C2C2" d="M 17.996,32L 12,32 L 12,16 l-4,0 l0-5.514 l 4-0.002l-0.006-3.248C 11.993,2.737, 13.213,0, 18.512,0l 4.412,0 l0,5.515 l-2.757,0 c-2.063,0-2.163,0.77-2.163,2.209l-0.008,2.76l 4.959,0 l-0.585,5.514L 18,16L 17.996,32z"></path></g>
+  <!-- Custom JS -->
+  <script src="http://localhost:4000//assets/js/scripts.js"></script>
 
 
-              </svg>
-            </span>
-            <span class="username">prabhpreet.dua</span>
-          </a>
-        </li>
-		<li>
-          <a href="https://www.linkedin.com/in/prabhpreetdua">
-            <span class="icon linkedin">
-             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" width="16px" height="16px" viewBox="0 0 62 58" version="1.1">
-    <!-- Generator: Sketch 3.0.3 (7891) - http://www.bohemiancoding.com/sketch -->
-    <title>footer-icon-linkedin-grey</title>
-    <desc>Created with Sketch.</desc>
-    <defs/>
-    <g id="App-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <path d="M0.456647399,30 C0.456647399,13.4314567 13.9075137,0 30.5,0 C47.0924863,0 60.5433526,13.4314567 60.5433526,30 C60.5433526,46.5685433 47.0924863,60 30.5,60 C13.9075137,60 0.456647399,46.5685433 0.456647399,30 Z M22.8425065,23.7098144 L16.0438505,23.7098144 L16.0438505,44.1369537 L22.8425065,44.1369537 L22.8425065,23.7098144 Z M23.2902832,17.3908761 C23.2461572,15.3880081 21.8138965,13.862504 19.4881191,13.862504 C17.1623417,13.862504 15.6418291,15.3880081 15.6418291,17.3908761 C15.6418291,19.3522579 17.1174011,20.9216886 19.3998672,20.9216886 L19.4433143,20.9216886 C21.8138965,20.9216886 23.2902832,19.3522579 23.2902832,17.3908761 Z M47.3610611,32.4246563 C47.3610611,26.1503226 44.007081,23.2301456 39.5332519,23.2301456 C35.9236128,23.2301456 34.3075166,25.2128128 33.4051747,26.6036896 L33.4051747,23.7103567 L26.605704,23.7103567 C26.6953136,25.6271338 26.605704,44.137496 26.605704,44.137496 L33.4051747,44.137496 L33.4051747,32.7292961 C33.4051747,32.1187963 33.4493006,31.5097877 33.629063,31.0726898 C34.1204225,29.8530458 35.2391853,28.5902885 37.1174576,28.5902885 C39.5785998,28.5902885 40.562405,30.4634101 40.562405,33.2084226 L40.562405,44.1369537 L47.3607895,44.1369537 L47.3610611,32.4246563 Z" id="footer-icon-linkedin-grey" fill-opacity="0.499999911" fill="#B2B4B3" sketch:type="MSShapeGroup"/>
-    </g>
-</svg>
-            </span>
-            <span class="username">prabhpreetdua</span>
-          </a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="footer-col-3 column">
-      <p class="text">A heterogeneous mixture of hobbyist electronics revelations, rudimentary coding hacks and thought provoking hypotheses on 42.</p>
-    </div>
-
-  </div>
-
-</footer>
-
-
-    </body>
+  </body>
 </html>
+
