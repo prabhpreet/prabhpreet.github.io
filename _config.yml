@@ -1,5 +1,5 @@
 # general configuration
-url: http://localhost:4000/
+url: http://prabhpreet.github.io
 baseurl: ''
 
 collections:
