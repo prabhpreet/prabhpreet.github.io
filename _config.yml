@@ -12,6 +12,15 @@ collections:
             type: projects
         - values:
             layout:base
+  scripts:
+    output: true
+    permalink: /scripts/:path/
+    defaults:
+        - scope:
+            path: "/scripts/"
+            type: scripts
+        - values:
+            layout:base
 
 # compass configuration
 compass:
