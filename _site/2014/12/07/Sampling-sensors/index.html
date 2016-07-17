@@ -71,7 +71,7 @@
             
                 <li><a href="https://www.linkedin.com/profile/view?id=216363808" target="_blank">LinkedIn</a></li>
             
-                <li><a href="http://prabhpreet.github.io/150511_Resume_PrabhpreetSinghDua_Online.pdf" >CV</a></li>
+                <li><a href="http://prabhpreet.github.io/resume.pdf" >CV</a></li>
             
 
           </ul>
@@ -105,45 +105,48 @@
 
 <p>It’s kind of like the file pointer data structure in C. It will store the port info, but you’ll have to use <code>fopen</code>, <code>fgets</code> and <code>fclose</code> like manipulating files in C. Actually, the port data has been abstracted to the file. However, <code>fclose</code> is a big deal if you want other programs (such as a code uploader) to access your port.</p>
 
-<div class="highlight"><pre><code class="language-matlab" data-lang="matlab"><span class="n">s</span> <span class="p">=</span> <span class="n">serial</span><span class="p">(</span><span class="s">&#39;COM3&#39;</span><span class="p">)</span> <span class="c">% COM3 is a port. Put whatever port your connected to!</span>
+<pre><code class="language-matlab">s = serial('COM3') % COM3 is a port. Put whatever port your connected to!
 
-<span class="n">set</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="s">&#39;BaudRate&#39;</span><span class="p">,</span> <span class="mi">115200</span><span class="p">);</span> <span class="c">%Set your baud rate!</span>
-<span class="n">s</span><span class="p">.</span><span class="n">InputBufferSize</span> <span class="p">=</span> <span class="mi">5000</span><span class="p">;</span> <span class="c">%Set the input buffer size (how much data can be stored)</span>
+set(s,'BaudRate', 115200); %Set your baud rate!
+s.InputBufferSize = 5000; %Set the input buffer size (how much data can be stored)
 
-<span class="n">fopen</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+fopen(s);
 
-<span class="c">... %Other code omitted</span>
+... %Other code omitted
 
-<span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c">%Infinite loop!</span>
-	<span class="k">if</span> <span class="n">s</span><span class="p">.</span><span class="n">BytesAvailable</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="c">% To avoid timeout and other weird things</span>
-		<span class="n">str</span> <span class="p">=</span> <span class="n">fgets</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
-		<span class="c">...</span>
-	<span class="k">end</span>
-<span class="k">end</span>
-<span class="n">fclose</span><span class="p">(</span><span class="n">s</span><span class="p">);</span> <span class="c">%Now you can access the object</span></code></pre></div>
+while(1) %Infinite loop!
+	if s.BytesAvailable &gt; 0 % To avoid timeout and other weird things
+		str = fgets(s);
+		...
+	end
+end
+fclose(s); %Now you can access the object
+</code></pre>
 
 <h3 id="exceptionerror-handling">Exception/Error handling</h3>
 
 <p>You’ll need this part because you want to close your port and let other programs access it in case something bad happens.</p>
 
-<div class="highlight"><pre><code class="language-matlab" data-lang="matlab"><span class="k">try</span>
-<span class="c">... %Your code here</span>
-<span class="k">catch</span> <span class="n">err</span> <span class="c">%Catch the damn problem</span>
-<span class="n">fclose</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
-<span class="k">end</span><span class="p">;</span></code></pre></div>
+<pre><code class="language-matlab">try
+... %Your code here
+catch err %Catch the damn problem
+fclose(s);
+end;
+</code></pre>
 
 <h3 id="plotting">Plotting</h3>
 
 <p>Here you can plot as usual as except you’ll have to use <code>drawnow</code> to plot your data immediately and <code>hold on</code> if you’re going to add data to the existing plot.</p>
 
-<div class="highlight"><pre><code class="language-matlab" data-lang="matlab"><span class="n">figure</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-<span class="n">hold</span> <span class="n">on</span><span class="p">;</span>
-<span class="c">...</span>
-<span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-	<span class="c">...</span>
-	<span class="n">plot</span><span class="p">(</span><span class="n">A</span><span class="p">);</span>
-	<span class="n">drawnow</span><span class="p">;</span>
-<span class="k">end</span></code></pre></div>
+<pre><code class="language-matlab">figure(1);
+hold on;
+...
+while(1)
+	...
+	plot(A);
+	drawnow;
+end
+</code></pre>
 
 <h3 id="string-manipulation">String manipulation</h3>
 
@@ -151,45 +154,43 @@
 
 <p>My data was of a white line sensor and I was getting it’s left, middle and right values hence the <code>L:%d M:%d R:%d</code>.</p>
 
-<div class="highlight"><pre><code class="language-matlab" data-lang="matlab"><span class="n">A</span> <span class="p">=</span> <span class="n">sscanf</span><span class="p">(</span><span class="n">str</span><span class="p">,</span> <span class="s">&#39;L:%d M:%d R:%d&#39;</span><span class="p">);</span></code></pre></div>
+<pre><code class="language-matlab">A = sscanf(str, 'L:%d M:%d R:%d');
+</code></pre>
 
 <h3 id="all-the-code">All the code</h3>
 
-<p>Here it is, in all it’s glory:</p>
+<p>Here it is, in all it’s glory:
+``` matlab 
+clear all;
+close all;</p>
 
-<div class="highlight"><pre><code class="language-matlab" data-lang="matlab"><span class="n">clear</span> <span class="n">all</span><span class="p">;</span>
-<span class="n">close</span> <span class="n">all</span><span class="p">;</span>
+<p>figure(1);
+delay = 0.5;</p>
 
-<span class="n">figure</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-<span class="n">delay</span> <span class="p">=</span> <span class="mf">0.5</span><span class="p">;</span>
+<p>s = serial(‘COM3’);</p>
 
-<span class="n">s</span> <span class="p">=</span> <span class="n">serial</span><span class="p">(</span><span class="s">&#39;COM3&#39;</span><span class="p">);</span>
+<p>set(s,’BaudRate’, 115200);
+s.InputBufferSize = 5000;</p>
 
-<span class="n">set</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="s">&#39;BaudRate&#39;</span><span class="p">,</span> <span class="mi">115200</span><span class="p">);</span>
-<span class="n">s</span><span class="p">.</span><span class="n">InputBufferSize</span> <span class="p">=</span> <span class="mi">5000</span><span class="p">;</span>
+<p>fopen(s);</p>
 
-<span class="n">fopen</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+<p>input(‘Ready?’);</p>
 
-<span class="n">input</span><span class="p">(</span><span class="s">&#39;Ready?&#39;</span><span class="p">);</span>
+<p>try
+A = [0;0;0];</p>
 
-<span class="k">try</span>
-<span class="n">A</span> <span class="p">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">;</span><span class="mi">0</span><span class="p">;</span><span class="mi">0</span><span class="p">];</span>
+<p>while(1)
+    if s.BytesAvailable &gt; 0
+    str = fgets(s);
+    A = sscanf(str, ‘L:%d M:%d R:%d’);
+    bar(A)
+    axis([0 4 0 255]);
+    drawnow
+    A = [0;0;0];</p>
 
-<span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">s</span><span class="p">.</span><span class="n">BytesAvailable</span> <span class="o">&gt;</span> <span class="mi">0</span>
-    <span class="n">str</span> <span class="p">=</span> <span class="n">fgets</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
-    <span class="n">A</span> <span class="p">=</span> <span class="n">sscanf</span><span class="p">(</span><span class="n">str</span><span class="p">,</span> <span class="s">&#39;L:%d M:%d R:%d&#39;</span><span class="p">);</span>
-    <span class="n">bar</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
-    <span class="n">axis</span><span class="p">([</span><span class="mi">0</span> <span class="mi">4</span> <span class="mi">0</span> <span class="mi">255</span><span class="p">]);</span>
-    <span class="n">drawnow</span>
-    <span class="n">A</span> <span class="p">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">;</span><span class="mi">0</span><span class="p">;</span><span class="mi">0</span><span class="p">];</span>
-    
-    <span class="k">end</span>
-<span class="k">end</span><span class="p">;</span>
-<span class="n">fclose</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
-<span class="k">catch</span> <span class="n">err</span>
-    <span class="n">fclose</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
-<span class="k">end</span><span class="p">;</span></code></pre></div>
+<pre><code>end end; fclose(s); catch err
+fclose(s); end; ``` 
+</code></pre>
 
 
       <a class="share" href="https://twitter.com/intent/tweet?text=&quot;Sampling sensors&quot;%20/2014/12/07/Sampling-sensors/%20via%20&#64;prabhpreetD" data-dnt="true">Share</a>
@@ -229,7 +230,7 @@
         </ul>
     </div>
     </aside>
-    <small>&copy; 2015 Prabhpreet Singh Dua. Powered by <a href="http://jekyllrb.com">Jekyll</a> using the <a href="http://jekyll.gtat.me/about">Balzac</a> theme.</small>
+    <small>&copy; 2016 Prabhpreet Singh Dua. Powered by <a href="http://jekyllrb.com">Jekyll</a> using the <a href="http://jekyll.gtat.me/about">Balzac</a> theme.</small>
   </footer>
 
   <!-- If they're out, get some from the cellar -->

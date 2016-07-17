@@ -40,11 +40,10 @@ compass:
 
 # Dependencies
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 
 # Permalinks
 permalink: pretty
-relative_permalinks: true
 
 
 title:            Prabhpreet Singh Dua
@@ -83,7 +82,7 @@ links:
     external: true
     icon: linkedin
   - title: CV
-    url: /150511_Resume_PrabhpreetSinghDua_Online.pdf
+    url: /resume.pdf
     icon: file-pdf-o
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
@@ -97,7 +96,7 @@ kramdown:
   footnote_nr: 1
   entity_output: as_char
   toc_levels: 1..6
-  use_coderay: false
+  enable_coderay: false
 
   coderay:
     coderay_line_numbers:

@@ -12,7 +12,7 @@ So I thought I'll share the important tidbits.
 
 It's kind of like the file pointer data structure in C. It will store the port info, but you'll have to use `fopen`, `fgets` and `fclose` like manipulating files in C. Actually, the port data has been abstracted to the file. However, `fclose` is a big deal if you want other programs (such as a code uploader) to access your port.
 
-{% highlight MATLAB %}
+``` matlab
 s = serial('COM3') % COM3 is a port. Put whatever port your connected to!
 
 set(s,'BaudRate', 115200); %Set your baud rate!
@@ -29,26 +29,25 @@ while(1) %Infinite loop!
 	end
 end
 fclose(s); %Now you can access the object
-
-{% endhighlight %}
+```
 
 ### Exception/Error handling
 
 You'll need this part because you want to close your port and let other programs access it in case something bad happens.
 
-{% highlight MATLAB %}
+``` matlab 
 try
 ... %Your code here
 catch err %Catch the damn problem
 fclose(s);
 end;
-{% endhighlight %}
+``` 
 
 ### Plotting
 
 Here you can plot as usual as except you'll have to use `drawnow` to plot your data immediately and `hold on` if you're going to add data to the existing plot.
 
-{% highlight MATLAB %}
+``` matlab 
 figure(1);
 hold on;
 ...
@@ -57,7 +56,7 @@ while(1)
 	plot(A);
 	drawnow;
 end
-{% endhighlight %}
+``` 
 
 ### String manipulation
 
@@ -65,14 +64,14 @@ Here I've used `sscanf` to manipulate the string. I think there is also a direct
 
 My data was of a white line sensor and I was getting it's left, middle and right values hence the `L:%d M:%d R:%d`.
 
-{% highlight MATLAB %}
+``` matlab 
 A = sscanf(str, 'L:%d M:%d R:%d');
-{% endhighlight %}
+``` 
 
 ### All the code
 
 Here it is, in all it's glory:
-{% highlight MATLAB %}
+``` matlab 
 clear all;
 close all;
 
@@ -106,4 +105,4 @@ fclose(s);
 catch err
     fclose(s);
 end;
-{% endhighlight %}
+``` 
