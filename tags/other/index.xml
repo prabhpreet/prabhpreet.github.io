@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Prabhpreet Singh Dua</title>
+    <link>http://prabhpreet.github.io/tags/other/index.xml</link>
+    <description>Recent content on Prabhpreet Singh Dua</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2016 Prabhpreet Singh Dua</copyright>
+    <atom:link href="/tags/other/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Badnaam</title>
+      <link>http://prabhpreet.github.io/project/badnaam/</link>
+      <pubDate>Wed, 27 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://prabhpreet.github.io/project/badnaam/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Avenues</title>
+      <link>http://prabhpreet.github.io/project/avenues/</link>
+      <pubDate>Tue, 27 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://prabhpreet.github.io/project/avenues/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Yet another static blog generator</title>
+      <link>http://prabhpreet.github.io/project/yasbg/</link>
+      <pubDate>Tue, 27 Apr 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://prabhpreet.github.io/project/yasbg/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

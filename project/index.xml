@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Project-rsses on Prabhpreet Singh Dua</title>
+    <link>http://prabhpreet.github.io/project/index.xml</link>
+    <description>Recent content in Project-rsses on Prabhpreet Singh Dua</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2016 Prabhpreet Singh Dua</copyright>
+    <lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/project/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Suppressed BPSK Demodulator using Costas Loop on a Microsemi FPGA</title>
+      <link>http://prabhpreet.github.io/project/isro/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://prabhpreet.github.io/project/isro/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cooperative Spectrum Sharing in Cognitive Radio Networks</title>
+      <link>http://prabhpreet.github.io/project/cooperativespectrumsharing/</link>
+      <pubDate>Wed, 27 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://prabhpreet.github.io/project/cooperativespectrumsharing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Scheduler</title>
+      <link>http://prabhpreet.github.io/project/scheduler/</link>
+      <pubDate>Mon, 27 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://prabhpreet.github.io/project/scheduler/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Automatic Room Temperature Control</title>
+      <link>http://prabhpreet.github.io/project/automaticroom/</link>
+      <pubDate>Sun, 27 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://prabhpreet.github.io/project/automaticroom/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Badnaam</title>
+      <link>http://prabhpreet.github.io/project/badnaam/</link>
+      <pubDate>Wed, 27 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://prabhpreet.github.io/project/badnaam/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Avenues</title>
+      <link>http://prabhpreet.github.io/project/avenues/</link>
+      <pubDate>Tue, 27 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://prabhpreet.github.io/project/avenues/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Yet another static blog generator</title>
+      <link>http://prabhpreet.github.io/project/yasbg/</link>
+      <pubDate>Tue, 27 Apr 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://prabhpreet.github.io/project/yasbg/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
