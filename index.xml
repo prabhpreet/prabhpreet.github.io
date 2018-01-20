@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Prabhpreet Singh Dua</title>
-    <link>http://prabhpreet.github.io/index.xml</link>
-    <description>Recent content on Prabhpreet Singh Dua</description>
+    <title>Prabhpreet Singh Dua on Prabhpreet Singh Dua</title>
+    <link>http://prabhpreet.github.io/</link>
+    <description>Recent content in Prabhpreet Singh Dua on Prabhpreet Singh Dua</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2016 Prabhpreet Singh Dua</copyright>
-    <lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&amp;copy; 2018 Prabhpreet Singh Dua</copyright>
+    <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Suppressed BPSK Demodulator using Costas Loop on a Microsemi FPGA</title>

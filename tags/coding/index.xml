@@ -1,32 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Projects on Prabhpreet Singh Dua</title>
-    <link>http://prabhpreet.github.io/project/</link>
-    <description>Recent content in Projects on Prabhpreet Singh Dua</description>
+    <title>Coding on Prabhpreet Singh Dua</title>
+    <link>http://prabhpreet.github.io/tags/coding/</link>
+    <description>Recent content in Coding on Prabhpreet Singh Dua</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018 Prabhpreet Singh Dua</copyright>
-    <lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/project/" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Suppressed BPSK Demodulator using Costas Loop on a Microsemi FPGA</title>
-      <link>http://prabhpreet.github.io/project/isro/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://prabhpreet.github.io/project/isro/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Cooperative Spectrum Sharing in Cognitive Radio Networks</title>
-      <link>http://prabhpreet.github.io/project/cooperativespectrumsharing/</link>
-      <pubDate>Wed, 27 May 2015 00:00:00 +0000</pubDate>
-      
-      <guid>http://prabhpreet.github.io/project/cooperativespectrumsharing/</guid>
-      <description></description>
-    </item>
+    <lastBuildDate>Mon, 27 Apr 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/coding/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Scheduler</title>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Prabhpreet Singh Dua</title>
+    <link>http://prabhpreet.github.io/tags/</link>
+    <description>Recent content in Tags on Prabhpreet Singh Dua</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018 Prabhpreet Singh Dua</copyright>
+    <lastBuildDate>Mon, 27 Apr 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Coding</title>
+      <link>http://prabhpreet.github.io/tags/coding/</link>
+      <pubDate>Mon, 27 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://prabhpreet.github.io/tags/coding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Communications</title>
+      <link>http://prabhpreet.github.io/tags/communications/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://prabhpreet.github.io/tags/communications/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Embedded</title>
+      <link>http://prabhpreet.github.io/tags/embedded/</link>
+      <pubDate>Mon, 27 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://prabhpreet.github.io/tags/embedded/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Matlab</title>
+      <link>http://prabhpreet.github.io/tags/matlab/</link>
+      <pubDate>Wed, 27 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://prabhpreet.github.io/tags/matlab/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tutorial</title>
+      <link>http://prabhpreet.github.io/tags/tutorial/</link>
+      <pubDate>Sun, 07 Dec 2014 12:00:00 +0000</pubDate>
+      
+      <guid>http://prabhpreet.github.io/tags/tutorial/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Web</title>
+      <link>http://prabhpreet.github.io/tags/web/</link>
+      <pubDate>Tue, 27 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://prabhpreet.github.io/tags/web/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
